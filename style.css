@@ -1,0 +1,245 @@
+:root {
+  --brand: #0d03a7;
+  --text: #14142b;
+  --muted: #5c5c74;
+  --border: #e2e2ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #ffffff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1.5px solid var(--brand);
+  border-radius: 20px;
+}
+
+.divider {
+  width: 70%;
+  height: 1px;
+  background: var(--border);
+  margin: 20px auto 24px;
+}
+
+.profile {
+  text-align: left;
+}
+
+.profile h1 {
+  font-size: 1.3rem;
+}
+
+.role {
+  margin: 0 0 20px;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 2px solid var(--brand);
+}
+
+.logo {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.logo-sm {
+  max-width: 140px;
+  margin-bottom: 24px;
+}
+
+/* Escritorio: mas aire alrededor de la tarjeta */
+@media (min-width: 768px) {
+  .container {
+    max-width: 460px;
+    margin-top: 96px;
+    padding: 48px 40px;
+  }
+}
+
+/* Movil: usar todo el ancho disponible y reducir espaciados */
+@media (max-width: 480px) {
+  .container {
+    margin-top: 32px;
+    padding: 20px 16px;
+  }
+
+  .avatar {
+    width: 76px;
+    height: 76px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .link-btn,
+  .info-item {
+    padding: 14px 16px;
+  }
+}
+
+.brand-mark {
+  width: 56px;
+  height: 3px;
+  background: var(--brand);
+  margin: 0 auto 18px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.link-btn .arrow {
+  color: var(--brand);
+  font-weight: 400;
+}
+
+.link-btn:hover {
+  border-color: var(--brand);
+  background: #f5f5fb;
+}
+
+.back-btn {
+  margin-top: 32px;
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-bottom: 1px solid transparent;
+}
+
+.back-btn:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+footer {
+  margin-top: 48px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.2px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--brand);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.92rem;
+  word-break: break-word;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.info-item:hover,
+.info-item:focus-visible {
+  background: var(--brand);
+  color: #fff;
+}
+
+.info-item:hover .label,
+.info-item:focus-visible .label,
+.info-item:hover .value,
+.info-item:focus-visible .value {
+  color: #fff;
+}
+
+.info-item:hover .icon,
+.info-item:focus-visible .icon {
+  color: #fff;
+}
+
+.info-item .label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.info-item .value {
+  display: block;
+  font-weight: 600;
+}
+
+.icon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--brand);
+}
